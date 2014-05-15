@@ -32,18 +32,17 @@
             // Filter images by a query string
             filter: function (query) {
                 query = this.buildQueryRegExp(query);
-                console.log('filter');
                 this.images
                     .removeClass('hide')
                     .filter(function () {
-                        return !query.test($(this).data('tags'));
+                        return !query.test(sanitizeTags($(this).data('tags')));
                     })
                     .addClass('hide');
             },
 
             // Build a regular expression for a query
             buildQueryRegExp: function (query) {
-                var pipedTags = query.trim().split(/\s+/).map(sanitizeTag).join('|');
+                var pipedTags = query.toLowerCase().trim().split(/\s+/).map(sanitizeTag).join('|');
                 return new RegExp('\\b(' + pipedTags + ')[a-z0-9\-]*\\b', 'gi');
             }
 
@@ -58,6 +57,11 @@
     // Sanitize a tag
     function sanitizeTag (tag) {
         return tag.replace(/[^a-z0-9\-]+/, '').trim().toLowerCase();
+    }
+
+    // Sanitize multiple tags (separated by spaces)
+    function sanitizeTags (tags) {
+        return tags.split(/\s+/).map(sanitizeTag).join(' ');
     }
 
 } (jQuery));

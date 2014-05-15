@@ -1,0 +1,23 @@
+
+# List Of Images
+# ==============
+#
+# This file should contain an array of image objects.
+# Each image object should have the following properties:
+#
+#   title:  (string)  A descriptive free-text title for the image
+#   file:   (string)  The file-name of the image, relative to the site's `image` folder
+#   tags:   (array)   A list tags which apply to the image
+#
+
+- title: Burying Acorns
+  file: burying-acorns.gif
+  tags: [acorn, dog, fail, squirrel]
+
+- title: Finish Him
+  file: finish-him.gif
+  tags: [ko, lamb, ram, sheep]
+
+- title: Santa
+  file: santa.gif
+  tags: [christmas, epic, reindeer, santa]

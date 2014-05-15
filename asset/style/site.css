@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+/* List styling */
+
+.secret-list {
+    list-style: none;
+    padding-left: 0;
+}
+.secret-list li {
+    display: block;
+}
+
+
+/* JavaScript hiding classes */
+
+.no-js .hide-if-no-js {
+    display: none;
+}

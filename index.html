@@ -1,0 +1,90 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{site.data.meta.lang}}" class="no-js">
+<head>
+    <!--[if gt IE 8]><!-->
+        <script>(function(d){d.className=d.className.replace('no-js','js');}(document.documentElement));</script>
+    <!--<![endif]-->
+
+    <!-- Page meta-information -->
+    <meta charset="utf-8"/>
+    <title>{{site.data.meta.name}}</title>
+    <meta name="description" content="{{site.data.meta.description}}"/>
+
+    <!-- Styles -->
+    <meta name="viewport" content="width=device-width"/>
+    <!--[if gt IE 7]><!-->
+        <link rel="stylesheet" href="asset/style/vendor/normalize.css"/>
+        <link rel="stylesheet" href="asset/style/site.css"/>
+    <!--<![endif]-->
+    <link rel="icon" href="/favicon.png" type="image/png"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+
+</head>
+<body>
+
+    <!--[if lte IE 8]>
+        <p style="background:#ffc;margin:0;padding:10px;">
+            <small>
+                You are using an outdated version of Internet Explorer. Parts of this site, and others,
+                may appear broken.<br/>
+                For a faster and safer browsing experience,
+                <a href="http://browsehappy.com/" target="_blank">Upgrade your browser</a>.
+            </small>
+        </p>
+    <![endif]-->
+
+    <div class="page">
+
+        <div role="main">
+
+            <h1>{{site.data.meta.name}}</h1>
+            <p>{{site.data.meta.description}}</p>
+
+            <div data-control="ImageList">
+                <div class="hide-if-no-js">
+                    <div data-role="preview-pane"></div>
+                    <input type="text" data-role="filter"/>
+                </div>
+                <ul class="secret-list">
+                    {% for image in site.data.images %}
+                        <li data-role="image">
+                            <h2 data-role="title">
+                                <a href="image/{{image.file | xml_escape}}" data-role="url">
+                                    {{image.title}}
+                                </a>
+                            </h2>
+                            <div>
+                                Tagged with
+                                <ul>
+                                    {% for tag in image.tags %}
+                                        <li data-role="tag">{{tag}}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+        <hr/>
+
+        <div role="contentinfo">
+            <small>
+                Copyright &copy; {{site.time | date: '%Y'}},
+                <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.
+            </small>
+        </div>
+
+    </div>
+
+    <!--[if gt IE 8]><!-->
+        <script src="asset/script/vendor/cuff.js"></script>
+        <script src="asset/script/site.js"></script>
+    <!--<![endif]-->
+
+</body>
+</html>

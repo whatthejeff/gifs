@@ -1,0 +1,11 @@
+
+# Jekyll config
+exclude:
+  - CNAME
+  - Makefile
+  - README.md
+future: false
+lsi: false
+markdown: kramdown
+safe: true
+timezone: Europe/London

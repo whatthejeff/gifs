@@ -10,10 +10,6 @@
 #   tags:   (array)   A list tags which apply to the image
 #
 
-- title: Squirrel burying acorns in dog
-  file: burying-acorns.gif
-  tags: [acorn, dog, fail, squirrel]
-
 - title: “Finish Him” lamb takes out kid
   file: finish-him.gif
   tags: [goat, ko, lamb, ram, sheep]
@@ -98,6 +94,10 @@
   file: cat/roll.gif
   tags: [cat, roll, tail]
 
+- title: Cat is chased by an inflatable shark
+  file: cat/shark-cat.gif
+  tags: [cat, scare, shark]
+
 - title: Strobe cat
   file: cat/strobe-cat.gif
   tags: [cat, psychedelic, strobe]
@@ -121,3 +121,35 @@
 - title: Cat helping to clean the floor
   file: cat/wiping-the-floor.gif
   tags: [cat, clean, floor]
+
+- title: Squirrel burying acorns in dog
+  file: burying-acorns.gif
+  tags: [acorn, dog, fail, squirrel]
+
+- title: Dog sits guiltily in arm-chair
+  file: dog/chair-dog.gif
+  tags: [chair, dog, guilty, sit]
+
+- title: Dog is ready for dinner
+  file: dog/dinner-time.gif
+  tags: [dinner, dog, sit]
+
+- title: Puppy traps itself under paddling-pool
+  file: dog/paddling-pool.gif
+  tags: [dog, paddling-pool, puppy, trap]
+
+- title: Pug falls in a hole
+  file: dog/pug-pool.gif
+  tags: [ball, dog, fall, pug]
+
+- title: Dog pulls a chair out from owner
+  file: dog/pull-chair.gif
+  tags: [chair, dog, fall]
+
+- title: Puppy slides down the stairs
+  file: dog/slide-down-stairs.gif
+  tags: [dog, puppy, slide, stairs]
+
+- title: Dog mistakes statue for person
+  file: dog/throw-the-stick.gif
+  tags: [dog, statue, stick]

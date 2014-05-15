@@ -54,7 +54,15 @@
 
             // Load a preview image
             loadUrl: function (url) {
-                el.innerHTML = '<img src="' + url + '" alt="Image preview"/>';
+                if (!this.img) {
+                    el.innerHTML = '<img src="" alt="Image preview"/>';
+                    this.img = el.querySelector('img');
+                    this.url = '';
+                }
+                if (this.url !== url) {
+                    console.log(this.img.src, url);
+                    this.img.src = this.url = url;
+                }
             }
 
         };

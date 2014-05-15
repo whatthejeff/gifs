@@ -43,7 +43,7 @@
             // Build a regular expression for a query
             buildQueryRegExp: function (query) {
                 var pipedTags = query.toLowerCase().trim().split(/\s+/).map(sanitizeTag).join('|');
-                return new RegExp('\\b(' + pipedTags + ')[a-z0-9\-]*\\b', 'gi');
+                return new RegExp('\\b(' + pipedTags + ')[a-z0-9\-]*\\b', 'i');
             }
 
         };

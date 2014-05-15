@@ -49,9 +49,9 @@
                 </div>
                 <ul class="secret-list">
                     {% for image in site.data.images %}
-                        <li data-role="image">
-                            <h2 data-role="title">
-                                <a href="image/{{image.file | xml_escape}}" data-role="url">
+                        <li data-role="image" data-url="image/{{image.file | xml_escape}}" data-tags="{{ image.tags | join: ' ' | xml_escape }}">
+                            <h2>
+                                <a href="image/{{image.file | xml_escape}}">
                                     {{image.title}}
                                 </a>
                             </h2>
@@ -59,7 +59,7 @@
                                 Tagged with
                                 <ul>
                                     {% for tag in image.tags %}
-                                        <li data-role="tag">{{tag}}</li>
+                                        <li>{{tag}}</li>
                                     {% endfor %}
                                 </ul>
                             </div>
@@ -83,6 +83,7 @@
 
     <!--[if gt IE 8]><!-->
         <script src="asset/script/vendor/cuff.js"></script>
+        <script src="asset/script/vendor/jquery.js"></script>
         <script src="asset/script/site.js"></script>
     <!--<![endif]-->
 

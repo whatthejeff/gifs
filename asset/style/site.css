@@ -12,8 +12,8 @@
 }
 
 
-/* JavaScript hiding classes */
+/* Hiding classes */
 
-.no-js .hide-if-no-js {
-    display: none;
+.hide, .no-js .hide-if-no-js {
+    display: none !important;
 }

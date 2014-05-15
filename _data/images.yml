@@ -10,13 +10,13 @@
 #   tags:   (array)   A list tags which apply to the image
 #
 
-- title: “Finish Him” lamb takes out kid
-  file: finish-him.gif
-  tags: [goat, ko, lamb, ram, sheep]
+# - title: “Finish Him” lamb takes out kid
+#   file: finish-him.gif
+#   tags: [goat, ko, lamb, ram, sheep]
 
-- title: Psychedelic Santa
-  file: santa.gif
-  tags: [christmas, epic, psychedelic, reindeer, santa]
+# - title: Psychedelic Santa
+#   file: santa.gif
+#   tags: [christmas, epic, psychedelic, reindeer, santa]
 
 - title: How to achieve anti-gravity
   file: cat/anti-gravity.gif

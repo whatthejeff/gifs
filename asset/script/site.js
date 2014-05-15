@@ -17,7 +17,6 @@
             init: function () {
                 var self = this;
                 this.el = el;
-                this.previewPane = cuff.controls.ImagePreviewPane(el.querySelector('[data-role=preview-pane]'));
                 this.filterInput = cuff.controls.ImageFilterInput(el.querySelector('[data-role=filter]'), this);
                 this.images = toArray(el.querySelectorAll('[data-role=image]')).map(function (imageEl) {
                     return cuff.controls.Image(imageEl, self.previewPane);
@@ -36,33 +35,6 @@
             buildQueryRegExp: function (query) {
                 var pipedTags = query.trim().split(/\s+/).map(sanitizeTag).join('|');
                 return new RegExp('\\b(' + pipedTags + ')[a-z0-9\-]*\\b', 'gi');
-            }
-
-        };
-        control.init();
-        return control;
-    };
-
-    // ImageFilterInput control (not used directly in DOM)
-    cuff.controls.ImagePreviewPane = function (el) {
-        var control = {
-
-            // Initialise the control
-            init: function () {
-                this.el = el;
-            },
-
-            // Load a preview image
-            loadUrl: function (url) {
-                if (!this.img) {
-                    el.innerHTML = '<img src="" alt="Image preview"/>';
-                    this.img = el.querySelector('img');
-                    this.url = '';
-                }
-                if (this.url !== url) {
-                    console.log(this.img.src, url);
-                    this.img.src = this.url = url;
-                }
             }
 
         };
@@ -99,7 +71,7 @@
             // Initialise the control
             init: function () {
                 this.el = el;
-                this.url = el.querySelector('[data-role=url]').getAttribute('href');
+                this.linkEl = el.querySelector('[data-role=url]');
                 this.tags = toArray(el.querySelectorAll('[data-role=tag]')).map(function (tagEl) {
                     return sanitizeTag(tagEl.innerText);
                 });
@@ -110,8 +82,9 @@
             // Bind DOM events
             bindEvents: function () {
                 var self = this;
-                el.addEventListener('mouseover', function () {
-                    previewPane.loadUrl(self.url);
+                this.linkEl.addEventListener('mousedown', function () {
+                    self.preview();
+                    return false;
                 });
             },
 
@@ -126,6 +99,17 @@
                     el.style.display = 'block';
                 } else {
                     el.style.display = 'none';
+                }
+            },
+
+            // Load a preview image
+            preview: function () {
+                if (!this.hasPreview) {
+                    el.innerHTML += '' +
+                        '<div class="preview">' +
+                            '<img src="' + this.linkEl.href + '" alt="Image preview"/>' +
+                        '</div>';
+                    this.hasPreview = true;
                 }
             }
 

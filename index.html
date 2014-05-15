@@ -39,30 +39,26 @@
 
         <div role="main">
 
-            <h1>{{site.data.meta.name}}</h1>
+            <h1 class="space-small">{{site.data.meta.name}}</h1>
             <p>{{site.data.meta.description}}</p>
 
             <div data-control="ImageList">
-                <div class="hide-if-no-js">
-                    <div data-role="preview-pane"></div>
-                    <input type="text" data-role="filter"/>
+                <div class="hide-if-no-js space-large">
+                    <input type="text" data-role="filter" class="filter-input" placeholder="Filter images by tag"/>
                 </div>
                 <ul class="secret-list">
                     {% for image in site.data.images %}
-                        <li data-role="image" data-url="image/{{image.file | xml_escape}}" data-tags="{{ image.tags | join: ' ' | xml_escape }}">
-                            <h2>
+                        <li data-role="image" data-url="image/{{image.file | xml_escape}}" data-tags="{{ image.tags | join: ' ' | xml_escape }}" class="space-large">
+                            <h2 class="space-small">
                                 <a href="image/{{image.file | xml_escape}}">
                                     {{image.title}}
                                 </a>
                             </h2>
-                            <div>
-                                Tagged with
-                                <ul>
-                                    {% for tag in image.tags %}
-                                        <li>{{tag}}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
+                            <ul class="secret-list inline-list tag-list">
+                                {% for tag in image.tags %}
+                                    <li>{{tag}}</li>
+                                {% endfor %}
+                            </ul>
                         </li>
                     {% endfor %}
                 </ul>
@@ -70,9 +66,7 @@
 
         </div>
 
-        <hr/>
-
-        <div role="contentinfo">
+        <div class="footer" role="contentinfo">
             <small>
                 Copyright &copy; {{site.time | date: '%Y'}},
                 <a href="{{site.data.author.url}}">{{site.data.author.name}}</a>.<br/>

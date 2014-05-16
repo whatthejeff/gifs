@@ -10,10 +10,6 @@
 #   tags:   (array)   A list tags which apply to the image
 #
 
-# - title: “Finish Him” lamb takes out kid
-#   file: finish-him.gif
-#   tags: [goat, ko, lamb, ram, sheep]
-
 # - title: Psychedelic Santa
 #   file: santa.gif
 #   tags: [christmas, epic, psychedelic, reindeer, santa]
@@ -68,7 +64,7 @@
 
 - title: Cat dressed up as a lion
   file: cat/lion.gif
-  tags: [cat, dressup, lion]
+  tags: [aww, cat, dressup, lion]
 
 - title: Cat eating a lollipop
   file: cat/lollipop.gif
@@ -76,7 +72,7 @@
 
 - title: Kitten having a milk bath
   file: cat/milk-bath.gif
-  tags: [bath, cat, kitten, milk]
+  tags: [aww, bath, cat, kitten, milk]
 
 - title: Cat enjoying a banana
   file: cat/nom-banana.gif
@@ -85,6 +81,10 @@
 - title: Cat gets octopussed
   file: cat/octopus-face.gif
   tags: [cat, face, octopus, wtf]
+
+- title: Cat helps with the printing
+  file: cat/printing.gif
+  tags: [cat, printer]
 
 - title: Cat helping with push-ups
   file: cat/push-ups.gif
@@ -112,7 +112,7 @@
 
 - title: Whack-A-Kitty
   file: cat/whack-a-kitty.gif
-  tags: [cat, kitten, whack]
+  tags: [aww, cat, kitten, whack]
 
 - title: Cat is freaked out by windscreen-wipers
   file: cat/windscreen-wipers.gif
@@ -136,7 +136,7 @@
 
 - title: Puppy traps itself under paddling-pool
   file: dog/paddling-pool.gif
-  tags: [dog, paddling-pool, puppy, trap]
+  tags: [aww, dog, paddling-pool, puppy, trap]
 
 - title: Pug falls in a hole
   file: dog/pug-pool.gif
@@ -153,3 +153,51 @@
 - title: Dog mistakes statue for person
   file: dog/throw-the-stick.gif
   tags: [dog, statue, stick]
+
+- title: Clever bunny cheats jump
+  file: bunny/cheaty-bunny.gif
+  tags: [bunny, cheat, jump, rabbit]
+
+- title: Overworked bunny is sleepy
+  file: bunny/overworked.gif
+  tags: [bunny, fall, rabbit, sleep]
+
+- title: smiling-bunnies.gif
+  file: bunny/smiling-bunnies.gif
+  tags: [aww, bunny, happy, rabbit, smile]
+
+- title: Sheep rams cow
+  file: caprinae/bonk.gif
+  tags: [bonk, ram, sheep]
+
+- title: “Finish Him” lamb takes out kid
+  file: caprinae/finish-him.gif
+  tags: [ko, lamb, ram, sheep]
+
+- title: Badger says "nope"
+  file: animal/badger-nope.gif
+  tags: [badger, fall, nope]
+
+- title: Bear steals a bin
+  file: animal/bear-bin.gif
+  tags: [bear, bin, steal]
+
+- title: Bird gets cozy
+  file: animal/bird-cover.gif
+  tags: [bird, sleep]
+
+- title: Hamster vomits up an eyeball
+  file: animal/hamster-eye.gif
+  tags: [eye, hamster]
+
+- title: Hamster falls asleep in wheel
+  file: animal/hamster-falling-asleep.gif
+  tags: [fall, hamster, sleep]
+
+- title: Clever seal steals a prize fish
+  file: animal/prize-fish.gif
+  tags: [fish, seal, steal]
+
+- title: Turtle skates
+  file: animal/turtle-scate.gif
+  tags: [skate, turtle]

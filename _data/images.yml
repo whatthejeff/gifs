@@ -154,6 +154,30 @@
   file: dog/throw-the-stick.gif
   tags: [dog, statue, stick]
 
+- title: Husky puppy doesn't like lime
+  file: dog/citrus/husky-lime.gif
+  tags: [citrus, dog, husky, lime, puppy]
+
+- title: Puppy doesn't like lemon
+  file: dog/citrus/lemon-bark.gif
+  tags: [citrus, dog, lemon, puppy]
+
+- title: Dog shakes head with lemon
+  file: dog/citrus/lemon-head-shake.gif
+  tags: [citrus, dog, lemon]
+
+- title: Dog rolls around with lemon
+  file: dog/citrus/lemon-roll.gif
+  tags: [citrus, dog, lemon]
+
+- title: Dog doesn't like lime
+  file: dog/citrus/lime-bark.gif
+  tags: [citrus, dog, lime]
+
+- title: Bernese Mountain dog puppy doesn't like lemon
+  file: dog/citrus/puppy-lemon.gif
+  tags: [citrus, dog, lemon, puppy]
+
 - title: Clever bunny cheats jump
   file: bunny/cheaty-bunny.gif
   tags: [bunny, cheat, jump, rabbit]

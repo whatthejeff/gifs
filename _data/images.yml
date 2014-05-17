@@ -208,7 +208,7 @@
 
 - title: Hamster vomits up an eyeball
   file: animal/hamster-eye.gif
-  tags: [eye, hamster]
+  tags: [eye, hamster, vomit]
 
 - title: Hamster falls asleep in wheel
   file: animal/hamster-falling-asleep.gif
@@ -261,3 +261,19 @@
 - title: trust-fall.gif
   file: fail/trust-fall.gif
   tags: [fail, fall, trust]
+
+- title: Fake signer makes balloon animal
+  file: people/balloon.gif
+  tags: [balloon, barack, obama, sign]
+
+- title: Martin Freeman loves to swear
+  file: people/martin-freeman.gif
+  tags: [bilbo, freeman, hobbit, martin, swear]
+
+- title: Spock vomits rainbows on Kirk
+  file: people/rainbow-spock.gif
+  tags: [kirk, rainbow, spock, star-trek, vomit]
+
+- title: Spider-Man's ultimate foe
+  file: people/spidermans-ultimate-foe.gif
+  tags: [sad, spider-man]

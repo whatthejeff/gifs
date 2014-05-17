@@ -218,6 +218,14 @@
   file: animal/hamster-falling-asleep.gif
   tags: [fall, hamster, sleep]
 
+- title: Happy owl being petted
+  file: animal/petting-owl.gif
+  tags: [aww, happy, owl, petting]
+
+- title: Little pig having a bath
+  file: animal/pig-bath.gif
+  tags: [aww, bath, pig]
+
 - title: Clever seal steals a prize fish
   file: animal/prize-fish.gif
   tags: [fish, seal, steal]

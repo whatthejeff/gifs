@@ -10,10 +10,6 @@
 #   tags:   (array)   A list tags which apply to the image
 #
 
-# - title: Psychedelic Santa
-#   file: santa.gif
-#   tags: [christmas, epic, psychedelic, reindeer, santa]
-
 - title: How to achieve anti-gravity
   file: cat/anti-gravity.gif
   tags: [cat, gravity, science, toast]
@@ -233,3 +229,15 @@
 - title: Turtle skates
   file: animal/turtle-scate.gif
   tags: [skate, turtle]
+
+- title: Internet comments
+  file: drawn/internet-comments.gif
+  tags: [comments, internet]
+
+- title: Psychedelic Santa
+  file: drawn/santa.gif
+  tags: [christmas, epic, psychedelic, reindeer, santa]
+
+- title: Writing
+  file: drawn/writing-process.gif
+  tags: [blood, keyboard-face, pain, writing]

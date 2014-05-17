@@ -1,4 +1,4 @@
-(function ($) {
+(function ($, win) {
 
 
     // Document ready
@@ -19,14 +19,40 @@
                 this.input = this.el.find('[data-role=filter]');
                 this.images = this.el.find('[data-role=image]');
                 this.bindEvents();
+                this.setInitialState();
             },
 
             // Bind DOM events
             bindEvents: function () {
                 var self = this;
+                var pushStateTimer;
                 this.input.on('keyup', function () {
-                    self.filter(self.input.val());
+                    var query = self.input.val();
+                    self.filter(query);
+                    if (win.history && win.history.pushState) {
+                        if (pushStateTimer) {
+                            clearTimeout(pushStateTimer);
+                        }
+                        pushStateTimer = setTimeout(function () {
+                            win.history.pushState({query: query}, '', '?q=' + query);
+                        }, 600);
+                    }
                 });
+                $(win).on('popstate', function (evt) {
+                    var state = evt.originalEvent.state;
+                    var query = (state ? state.query : '');
+                    self.input.val(query);
+                    self.filter(query);
+                });
+            },
+
+            // Set the initial filter state
+            setInitialState: function () {
+                var query = parseQueryString(win.location.search).q;
+                if (query) {
+                    this.input.val(query);
+                    this.filter(query);
+                }
             },
 
             // Filter images by a query string
@@ -64,4 +90,16 @@
         return tags.split(/\s+/).map(sanitizeTag).join(' ');
     }
 
-} (jQuery));
+    // Simple query parser
+    function parseQueryString (qs) {
+        var params = {};
+        qs.replace(/^\?/, '').split('&').forEach(function (param) {
+            var parts = param.split('=');
+            var key = parts.shift();
+            var val = parts.join('=');
+            params[key] = val;
+        });
+        return params;
+    }
+
+} (jQuery, window));

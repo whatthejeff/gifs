@@ -48,7 +48,8 @@
                     <input type="text" data-role="filter" class="filter-input" placeholder="Filter images by tag"/>
                 </div>
                 <ul class="secret-list">
-                    {% for image in site.data.images %}
+                    {% assign images = site.data.images | sort: 'title' %}
+                    {% for image in images %}
                         <li data-role="image" data-url="image/{{image.file | xml_escape}}" data-tags="{{ image.tags | join: ' ' | xml_escape }}" class="space-large">
                             <h2 class="space-small">
                                 <a href="image/{{image.file | xml_escape}}">
